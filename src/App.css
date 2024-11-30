@@ -1,0 +1,60 @@
+/* App.css */
+
+/* General Styles */
+body {
+  background-color: #F1F2F4 !important; 
+  font-family: Arial, sans-serif;
+  font-size: 16px !important;
+}
+
+/* .container {
+  margin-top: 20px;
+} */
+
+.navbar {
+  background-color: #2874f0; /* Flipkart blue */
+  color: white;
+}
+
+.navbar-brand {
+  color: white;
+  font-weight: bold;
+}
+
+.navbar a {
+  color: white;
+  margin-right: 15px;
+}
+
+.card {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  border: none;
+}
+
+.card img {
+  height: 150px;
+  object-fit: contain;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.card-text {
+  font-size: 0.9rem;
+}
+
+.card .btn {
+  background-color: #2874f0;
+  color: white;
+  font-weight: bold;
+}
+
+.card .btn:hover {
+  background-color: #0056b3;
+}
+
+.checkout-buttons button {
+  margin-right: 10px;
+}

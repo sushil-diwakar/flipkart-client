@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  
+    <title>React App</title>
+    <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  rel="stylesheet"
+/>
+
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    
+
+    <script>
+      setInterval(function () {
+        var d = new Date();
+        var seconds = d.getMinutes() * 60 + d.getSeconds(); // convert minutes to seconds
+        var fifteenMin = 900; // 15 minutes is 900 seconds
+        var timeleft = fifteenMin - (seconds % fifteenMin);
+        var minutes = parseInt(timeleft / 60); // calculate minutes
+        var seconds = timeleft % 60; // calculate remaining seconds
+    
+        // Format the result
+        var result = (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+    
+        // Check if the element exists before updating it
+        var timeElement = document.getElementById('time');
+        if (timeElement) {
+          timeElement.textContent = result;
+        }
+      }, 500); // calling it every 0.5 second to do a countdown
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+</html>
