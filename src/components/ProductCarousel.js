@@ -10,7 +10,7 @@ const ProductCarousel = ({ productId }) => {
     const fetchImages = async () => {
       try {
         // Replace with your API endpoint that fetches product details
-        const response = await axios.get(`http://localhost:8000/api/products/${productId}`);
+        const response = await axios.get(`https://flipkart-backend-ci0q.onrender.com/api/products/${productId}`);
         setImages(response.data.images || []); // Assuming the API response contains an "images" array
       } catch (error) {
         console.error('Error fetching product images:', error);

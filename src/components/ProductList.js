@@ -12,7 +12,7 @@ export const ProductList = () => {
     // Fetch products from the API
     const fetchProducts = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/products");
+        const response = await axios.get(`https://flipkart-backend-ci0q.onrender.com/api/products`);
         setProducts(response.data);
         setLoading(false);
       } catch (error) {

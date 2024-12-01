@@ -14,7 +14,7 @@ export const ProductDetail = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/api/products/${id}`);
+        const response = await axios.get(`https://flipkart-backend-ci0q.onrender.com/api/products/${id}`);
         setProduct(response.data);
         setLoading(false);
       } catch (error) {

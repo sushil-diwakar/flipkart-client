@@ -10,11 +10,13 @@ const ColorOptions = ({ productId }) => {
     const fetchProduct = async () => {
       try {
         // Fetch product details from the API
-        const response = await axios.get(`http://localhost:8000/api/products/${productId}`);
+        const response = await axios.get(`https://flipkart-backend-ci0q.onrender.com/api/products/${productId}`);
+        
         setProduct(response.data); // Assuming the API response contains product details including color options
         setSelectedColor(response.data.colorOption[0]?.color || ''); // Set default selected color
       } catch (error) {
         console.error('Error fetching product:', error);
+        console.log("Dataa", process.env.REACT_APP_API_URL);
       }
     };
 
